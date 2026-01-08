@@ -38,11 +38,6 @@ variable "service_agent_pubsub_member" {
   description = "Service agent member for Pub/Sub IAM bindings."
 }
 
-variable "service_agent_storage_member" {
-  type        = string
-  description = "Service agent member for Storage IAM bindings."
-}
-
 variable "region" {
   type        = string
   description = "Region of the resource."
@@ -56,4 +51,9 @@ variable "vpc_name" {
 variable "subnet_name" {
   type        = string
   description = "Name of the subnetwork."
+}
+
+variable "repository_id" {
+  type        = string
+  description = "ID of the Artifact Registry repository."
 }

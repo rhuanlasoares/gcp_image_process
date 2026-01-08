@@ -97,3 +97,8 @@ variable "name_eventarc_trigger" {
   type        = string
   description = "Name of the Eventarc trigger."
 }
+
+variable "repository_id" {
+  type        = string
+  description = "ID of the Artifact Registry repository."
+}

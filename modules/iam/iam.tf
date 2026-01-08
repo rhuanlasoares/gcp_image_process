@@ -18,10 +18,13 @@ resource "google_project_iam_member" "pub_sub_token_creator" {
   member  = var.service_agent_pubsub_member
 }
 
+data "google_storage_project_service_account" "gcs_account" {
+  project = var.project_id
+}
 resource "google_project_iam_member" "pub_sub_publisher" {
   project = var.project_id
   role    = "roles/pubsub.publisher"
-  member  = var.service_agent_storage_member
+  member  = "serviceAccount:${data.google_storage_project_service_account.gcs_account.email_address}"
 }
 
 resource "google_compute_subnetwork_iam_member" "cloud_run_network_user" {
@@ -29,5 +32,13 @@ resource "google_compute_subnetwork_iam_member" "cloud_run_network_user" {
   region     = var.region
   subnetwork = var.subnet_name
   role       = "roles/compute.networkUser"
+  member     = var.sa_cloud_run_member
+}
+
+resource "google_artifact_registry_repository_iam_member" "member" {
+  project    = var.project_id
+  location   = var.region
+  repository = var.repository_id
+  role       = "roles/artifactregistry.reader"
   member     = var.sa_cloud_run_member
 }
