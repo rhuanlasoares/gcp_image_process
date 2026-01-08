@@ -27,4 +27,3 @@ resource "google_storage_bucket" "bucket_output" {
   uniform_bucket_level_access = false
   public_access_prevention    = "enforced"
 }
-

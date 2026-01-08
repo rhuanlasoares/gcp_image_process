@@ -4,4 +4,3 @@ resource "google_project_service" "allow_api" {
   service            = each.value
   disable_on_destroy = false
 }
-

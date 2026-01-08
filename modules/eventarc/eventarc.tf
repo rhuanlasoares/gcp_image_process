@@ -7,6 +7,7 @@ resource "google_eventarc_trigger" "default" {
     attribute = "type"
     value     = "google.cloud.storage.object.v1.finalized"
   }
+
   matching_criteria {
     attribute = "bucket"
     value     = var.bucket_name_input
