@@ -2,7 +2,8 @@ module "iam" {
   depends_on = [
     module.apis,
     module.service_account,
-    module.network
+    module.network,
+    module.artifact_registry
   ]
   source = "./modules/iam"
 
