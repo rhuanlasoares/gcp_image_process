@@ -57,3 +57,18 @@ variable "repository_id" {
   type        = string
   description = "ID of the Artifact Registry repository."
 }
+
+variable "sa_wifederation_member" {
+  type        = string
+  description = "Service Account member of Workload Identity Federation for IAM bindings."
+}
+
+variable "service_name_cloud_run" {
+  type        = string
+  description = "Name of the Cloud Run service."
+}
+
+variable "roles_sa_wifederation_bucket" {
+  type        = map(string)
+  description = "Map of roles to be assigned to the Workload Identity Federation service account."
+}

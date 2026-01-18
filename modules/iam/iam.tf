@@ -35,10 +35,41 @@ resource "google_compute_subnetwork_iam_member" "cloud_run_network_user" {
   member     = var.sa_cloud_run_member
 }
 
-resource "google_artifact_registry_repository_iam_member" "member" {
+resource "google_artifact_registry_repository_iam_member" "cloud_run_artreg_reader" {
   project    = var.project_id
   location   = var.region
   repository = var.repository_id
   role       = "roles/artifactregistry.reader"
   member     = var.sa_cloud_run_member
+}
+
+resource "google_artifact_registry_repository_iam_member" "sa_wifederation_artreg_admin" {
+  project    = var.project_id
+  location   = var.region
+  repository = var.repository_id
+  role       = "roles/artifactregistry.admin"
+  member     = var.sa_wifederation_member
+}
+
+resource "google_compute_subnetwork_iam_member" "sa_wifederation_network_admin" {
+  project    = var.project_id
+  region     = var.region
+  subnetwork = var.subnet_name
+  role       = "roles/compute.networkAdmin"
+  member     = var.sa_wifederation_member
+}
+
+resource "google_storage_bucket_iam_member" "storage_admin" {
+  for_each = var.roles_sa_wifederation_bucket
+  bucket   = each.key
+  role     = each.value
+  member   = var.sa_wifederation_member
+}
+
+resource "google_cloud_run_v2_service_iam_member" "member" {
+  project  = var.project_id
+  location = var.region
+  name     = var.service_name_cloud_run
+  role     = "roles/run.admin"
+  member   = var.sa_wifederation_member
 }

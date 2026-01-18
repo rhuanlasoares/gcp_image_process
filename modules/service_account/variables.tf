@@ -22,3 +22,13 @@ variable "display_name_sa_eventarc" {
   type        = string
   description = "Display name for the Eventarc service account."
 }
+
+variable "account_id_sa_wifederation" {
+  type        = string
+  description = "Account ID for the Workload Identity Fedeartion service account."
+}
+
+variable "display_name_sa_wifederation" {
+  type        = string
+  description = "Account ID for the Workload Identity Fedeartion service account."
+}

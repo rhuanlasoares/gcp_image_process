@@ -1,7 +1,6 @@
 module "cloud_run" {
   depends_on = [
     module.apis,
-    module.iam,
     module.network
   ]
   source = "./modules/cloud_run"
