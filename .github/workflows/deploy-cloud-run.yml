@@ -43,12 +43,12 @@ jobs:
         with:
           push: true
           tags: |
-              ${{ env.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY }}/gcp_image_process:latest
+              ${{ env.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ vars.GCP_ARTIFACT_REGISTRY }}/gcp_image_process:latest
 
       - id: 'deploy'
         uses: 'google-github-actions/deploy-cloudrun@v3'
         with:
-          service: ${{ env.GCP_SERVICE_NAME }}
-          image: ${{ env.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY }}/gcp_image_process:latest
+          service: ${{ vars.GCP_SERVICE_NAME }}
+          image: ${{ env.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ vars.GCP_ARTIFACT_REGISTRY }}/gcp_image_process:latest
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           region: ${{ env.GCP_REGION }}
