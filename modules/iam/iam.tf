@@ -1,11 +1,10 @@
 resource "google_project_iam_member" "eventarc_permissions" {
-  for_each = var.roles_sa_eventarc
-  project  = var.project_id
-  role     = each.value
-  member   = var.sa_eventarc_member
+  project = var.project_id
+  role    = "roles/eventarc.eventReceiver"
+  member  = var.sa_eventarc_member
 }
 
-resource "google_storage_bucket_iam_member" "storage_reader" {
+resource "google_storage_bucket_iam_member" "storage" {
   for_each = var.roles_sa_cloud_run_bucket
   bucket   = each.key
   role     = each.value
@@ -66,12 +65,20 @@ resource "google_storage_bucket_iam_member" "storage_admin" {
   member   = var.sa_wifederation_member
 }
 
-resource "google_cloud_run_v2_service_iam_member" "member" {
+resource "google_cloud_run_v2_service_iam_member" "wifederation_admin" {
   project  = var.project_id
   location = var.region
   name     = var.service_name_cloud_run
   role     = "roles/run.admin"
   member   = var.sa_wifederation_member
+}
+
+resource "google_cloud_run_v2_service_iam_member" "eventarc_invoker" {
+  project  = var.project_id
+  location = var.region
+  name     = var.service_name_cloud_run
+  role     = "roles/run.invoker"
+  member   = var.sa_eventarc_member
 }
 
 resource "google_service_account_iam_member" "sa_cloud_run_actAs" {

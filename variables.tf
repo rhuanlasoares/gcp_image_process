@@ -18,11 +18,6 @@ variable "service_agents" {
   description = "Map of service agents to be created."
 }
 
-variable "roles_sa_eventarc" {
-  type        = map(string)
-  description = "Map of roles to be assigned to the Eventarc service account."
-}
-
 variable "roles_sa_cloud_run_bucket" {
   type        = map(string)
   description = "Map of roles to be assigned to the Cloud Run service account."

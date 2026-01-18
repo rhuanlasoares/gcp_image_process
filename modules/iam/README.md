@@ -21,15 +21,16 @@ No modules.
 |------|------|
 | [google_artifact_registry_repository_iam_member.cloud_run_artreg_reader](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/artifact_registry_repository_iam_member) | resource |
 | [google_artifact_registry_repository_iam_member.sa_wifederation_artreg_admin](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/artifact_registry_repository_iam_member) | resource |
-| [google_cloud_run_v2_service_iam_member.member](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/cloud_run_v2_service_iam_member) | resource |
+| [google_cloud_run_v2_service_iam_member.eventarc_invoker](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/cloud_run_v2_service_iam_member) | resource |
+| [google_cloud_run_v2_service_iam_member.wifederation_admin](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/cloud_run_v2_service_iam_member) | resource |
 | [google_compute_subnetwork_iam_member.cloud_run_network_user](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_subnetwork_iam_member) | resource |
 | [google_compute_subnetwork_iam_member.sa_wifederation_network_admin](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_subnetwork_iam_member) | resource |
 | [google_project_iam_member.eventarc_permissions](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_member) | resource |
 | [google_project_iam_member.pub_sub_publisher](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_member) | resource |
 | [google_project_iam_member.pub_sub_token_creator](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_member) | resource |
 | [google_service_account_iam_member.sa_cloud_run_actAs](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account_iam_member) | resource |
+| [google_storage_bucket_iam_member.storage](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_iam_member) | resource |
 | [google_storage_bucket_iam_member.storage_admin](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_iam_member) | resource |
-| [google_storage_bucket_iam_member.storage_reader](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_iam_member) | resource |
 | [google_storage_project_service_account.gcs_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/storage_project_service_account) | data source |
 
 ## Inputs
@@ -42,7 +43,6 @@ No modules.
 | <a name="input_region"></a> [region](#input\_region) | Region of the resource. | `string` | n/a | yes |
 | <a name="input_repository_id"></a> [repository\_id](#input\_repository\_id) | ID of the Artifact Registry repository. | `string` | n/a | yes |
 | <a name="input_roles_sa_cloud_run_bucket"></a> [roles\_sa\_cloud\_run\_bucket](#input\_roles\_sa\_cloud\_run\_bucket) | Map of roles to be assigned to the Cloud Run service account. | `map(string)` | n/a | yes |
-| <a name="input_roles_sa_eventarc"></a> [roles\_sa\_eventarc](#input\_roles\_sa\_eventarc) | Map of roles to be assigned to the Eventarc service account. | `map(string)` | n/a | yes |
 | <a name="input_roles_sa_wifederation_bucket"></a> [roles\_sa\_wifederation\_bucket](#input\_roles\_sa\_wifederation\_bucket) | Map of roles to be assigned to the Workload Identity Federation service account. | `map(string)` | n/a | yes |
 | <a name="input_sa_cloud_run_member"></a> [sa\_cloud\_run\_member](#input\_sa\_cloud\_run\_member) | Service Account member of Cloud Run for IAM bindings. | `string` | n/a | yes |
 | <a name="input_sa_eventarc_member"></a> [sa\_eventarc\_member](#input\_sa\_eventarc\_member) | Service account member for Eventarc IAM bindings. | `string` | n/a | yes |

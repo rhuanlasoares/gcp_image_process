@@ -55,7 +55,6 @@ No resources.
 | <a name="input_region"></a> [region](#input\_region) | Region of the resource. | `string` | n/a | yes |
 | <a name="input_repository_id"></a> [repository\_id](#input\_repository\_id) | ID of the Artifact Registry repository. | `string` | n/a | yes |
 | <a name="input_roles_sa_cloud_run_bucket"></a> [roles\_sa\_cloud\_run\_bucket](#input\_roles\_sa\_cloud\_run\_bucket) | Map of roles to be assigned to the Cloud Run service account. | `map(string)` | n/a | yes |
-| <a name="input_roles_sa_eventarc"></a> [roles\_sa\_eventarc](#input\_roles\_sa\_eventarc) | Map of roles to be assigned to the Eventarc service account. | `map(string)` | n/a | yes |
 | <a name="input_roles_sa_wifederation_bucket"></a> [roles\_sa\_wifederation\_bucket](#input\_roles\_sa\_wifederation\_bucket) | Map of roles to be assigned to the Workload Identity Federation service account. | `map(string)` | n/a | yes |
 | <a name="input_router_name"></a> [router\_name](#input\_router\_name) | The name of the Cloud Router. | `string` | n/a | yes |
 | <a name="input_service_agents"></a> [service\_agents](#input\_service\_agents) | Map of service agents to be created. | `map(string)` | n/a | yes |

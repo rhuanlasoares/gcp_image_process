@@ -9,7 +9,6 @@ module "iam" {
   source = "./modules/iam"
 
   project_id                   = var.project_id
-  roles_sa_eventarc            = var.roles_sa_eventarc
   sa_eventarc_member           = module.service_account.sa_eventarc_member
   roles_sa_cloud_run_bucket    = var.roles_sa_cloud_run_bucket
   bucket_name_input            = var.bucket_name_input

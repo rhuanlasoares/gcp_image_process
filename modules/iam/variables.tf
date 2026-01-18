@@ -3,11 +3,6 @@ variable "project_id" {
   description = "Project ID of the project."
 }
 
-variable "roles_sa_eventarc" {
-  type        = map(string)
-  description = "Map of roles to be assigned to the Eventarc service account."
-}
-
 variable "sa_eventarc_member" {
   type        = string
   description = "Service account member for Eventarc IAM bindings."
