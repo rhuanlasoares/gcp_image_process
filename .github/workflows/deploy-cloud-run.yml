@@ -41,6 +41,7 @@ jobs:
         id: docker-push-tagged
         uses: docker/build-push-action@v2
         with:
+          context: ./app
           push: true
           file: ./app/Dockerfile
           tags: |
