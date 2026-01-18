@@ -27,6 +27,7 @@ No modules.
 | [google_project_iam_member.eventarc_permissions](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_member) | resource |
 | [google_project_iam_member.pub_sub_publisher](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_member) | resource |
 | [google_project_iam_member.pub_sub_token_creator](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_member) | resource |
+| [google_service_account_iam_member.sa_cloud_run_actAs](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account_iam_member) | resource |
 | [google_storage_bucket_iam_member.storage_admin](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_iam_member) | resource |
 | [google_storage_bucket_iam_member.storage_reader](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_iam_member) | resource |
 | [google_storage_project_service_account.gcs_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/storage_project_service_account) | data source |
@@ -46,6 +47,7 @@ No modules.
 | <a name="input_sa_cloud_run_member"></a> [sa\_cloud\_run\_member](#input\_sa\_cloud\_run\_member) | Service Account member of Cloud Run for IAM bindings. | `string` | n/a | yes |
 | <a name="input_sa_eventarc_member"></a> [sa\_eventarc\_member](#input\_sa\_eventarc\_member) | Service account member for Eventarc IAM bindings. | `string` | n/a | yes |
 | <a name="input_sa_wifederation_member"></a> [sa\_wifederation\_member](#input\_sa\_wifederation\_member) | Service Account member of Workload Identity Federation for IAM bindings. | `string` | n/a | yes |
+| <a name="input_sa_wifederation_name"></a> [sa\_wifederation\_name](#input\_sa\_wifederation\_name) | Name of the Service Account user for Workload Identity Federation. | `string` | n/a | yes |
 | <a name="input_service_agent_pubsub_member"></a> [service\_agent\_pubsub\_member](#input\_service\_agent\_pubsub\_member) | Service agent member for Pub/Sub IAM bindings. | `string` | n/a | yes |
 | <a name="input_service_name_cloud_run"></a> [service\_name\_cloud\_run](#input\_service\_name\_cloud\_run) | Name of the Cloud Run service. | `string` | n/a | yes |
 | <a name="input_subnet_name"></a> [subnet\_name](#input\_subnet\_name) | Name of the subnetwork. | `string` | n/a | yes |

@@ -23,4 +23,5 @@ module "iam" {
   service_name_cloud_run       = var.service_name_cloud_run
   sa_wifederation_member       = module.service_account.sa_wifederation_member
   roles_sa_wifederation_bucket = var.roles_sa_wifederation_bucket
+  sa_wifederation_name         = module.service_account.sa_cloud_run_name
 }

@@ -73,3 +73,9 @@ resource "google_cloud_run_v2_service_iam_member" "member" {
   role     = "roles/run.admin"
   member   = var.sa_wifederation_member
 }
+
+resource "google_service_account_iam_member" "sa_cloud_run_actAs" {
+  service_account_id = var.sa_wifederation_name
+  role               = "roles/iam.serviceAccountUser"
+  member             = var.sa_wifederation_member
+}

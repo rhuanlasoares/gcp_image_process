@@ -27,3 +27,8 @@ output "sa_wifederation_member" {
   description = "The email of the sa_wifederation service account"
   value       = google_service_account.sa_wifederation.member
 }
+
+output "sa_cloud_run_name" {
+  description = "The name of the Cloud Run service account"
+  value       = google_service_account.sa_cloud_run.name
+}

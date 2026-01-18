@@ -58,7 +58,6 @@ No resources.
 | <a name="input_roles_sa_eventarc"></a> [roles\_sa\_eventarc](#input\_roles\_sa\_eventarc) | Map of roles to be assigned to the Eventarc service account. | `map(string)` | n/a | yes |
 | <a name="input_roles_sa_wifederation_bucket"></a> [roles\_sa\_wifederation\_bucket](#input\_roles\_sa\_wifederation\_bucket) | Map of roles to be assigned to the Workload Identity Federation service account. | `map(string)` | n/a | yes |
 | <a name="input_router_name"></a> [router\_name](#input\_router\_name) | The name of the Cloud Router. | `string` | n/a | yes |
-| <a name="input_sa_wifederation_email"></a> [sa\_wifederation\_email](#input\_sa\_wifederation\_email) | Email of the Service Account used for Workload Identity Federation. | `string` | n/a | yes |
 | <a name="input_service_agents"></a> [service\_agents](#input\_service\_agents) | Map of service agents to be created. | `map(string)` | n/a | yes |
 | <a name="input_service_name_cloud_run"></a> [service\_name\_cloud\_run](#input\_service\_name\_cloud\_run) | Name of the Cloud Run service. | `string` | n/a | yes |
 | <a name="input_subnet_name"></a> [subnet\_name](#input\_subnet\_name) | Name of the subnet within the VPC network. | `string` | n/a | yes |

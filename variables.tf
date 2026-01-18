@@ -128,11 +128,6 @@ variable "owner_and_repository" {
   description = "Owner and the name of the repository. Example: owner/repository."
 }
 
-variable "sa_wifederation_email" {
-  type        = string
-  description = "Email of the Service Account used for Workload Identity Federation."
-}
-
 variable "roles_sa_wifederation_bucket" {
   type        = map(string)
   description = "Map of roles to be assigned to the Workload Identity Federation service account."

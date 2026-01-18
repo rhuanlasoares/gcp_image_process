@@ -72,3 +72,8 @@ variable "roles_sa_wifederation_bucket" {
   type        = map(string)
   description = "Map of roles to be assigned to the Workload Identity Federation service account."
 }
+
+variable "sa_wifederation_name" {
+  type        = string
+  description = "Name of the Service Account user for Workload Identity Federation."
+}

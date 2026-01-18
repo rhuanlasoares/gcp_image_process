@@ -41,6 +41,7 @@ No modules.
 |------|-------------|
 | <a name="output_sa_cloud_run_email"></a> [sa\_cloud\_run\_email](#output\_sa\_cloud\_run\_email) | The email of the Cloud Run service account |
 | <a name="output_sa_cloud_run_member"></a> [sa\_cloud\_run\_member](#output\_sa\_cloud\_run\_member) | The member of the Cloud Run service account |
+| <a name="output_sa_cloud_run_name"></a> [sa\_cloud\_run\_name](#output\_sa\_cloud\_run\_name) | The name of the Cloud Run service account |
 | <a name="output_sa_eventarc_email"></a> [sa\_eventarc\_email](#output\_sa\_eventarc\_email) | The email of the Eventarc service account |
 | <a name="output_sa_eventarc_member"></a> [sa\_eventarc\_member](#output\_sa\_eventarc\_member) | The member of the Eventarc service account |
 | <a name="output_sa_wifederation_email"></a> [sa\_wifederation\_email](#output\_sa\_wifederation\_email) | The email of the sa\_wifederation service account |
